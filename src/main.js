@@ -154,7 +154,8 @@ function createVideoElement(video) {
   const content = document.createElement("div");
   const title = document.createElement("h2");
   title.textContent = video?.items?.snippet?.title || "Untitled";
-  title.className = "text-xl p-4 font-semibold text-center mt-4";
+  title.className =
+    "text-xl p-4 font-semibold text-center mt-4 text-nowrap text-ellipsis overflow-hidden";
 
   const duration = document.createElement("span");
   duration.textContent = formatDuration(
@@ -163,7 +164,21 @@ function createVideoElement(video) {
   duration.className =
     "absolute bg-white bottom-25 sm:bottom-30 right-3 text-gray-800 px-2 py-1 rounded-md text-sm";
 
-  content.append(title);
+  const metaInfo = document.createElement("div");
+  metaInfo.className = "flex justify-center items-center gap-3 p-2";
+
+  const views = document.createElement("span");
+  const likes = document.createElement("span");
+  const comments = document.createElement("span");
+
+  views.textContent = `${video?.items?.statistics?.viewCount ?? 0} views`;
+  likes.textContent = `${video?.items?.statistics?.likeCount ?? 0} likes`;
+  comments.textContent = `${
+    video?.items?.statistics?.commentCount ?? 0
+  } comments`;
+
+  metaInfo.append(views, likes, comments);
+  content.append(title, metaInfo);
   videoElement.append(thumbnail, content, duration);
   videoElementWrapper.append(videoElement);
 
