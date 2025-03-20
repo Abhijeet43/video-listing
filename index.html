@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.js" defer></script>
+  </head>
+  <body>
+    <main class="p-4 min-h-screen">
+      <section>
+        <input
+          type="search"
+          id="search"
+          class="mb-4 p-2 border border-gray-300 rounded-lg w-full"
+          placeholder="Search Videos...."
+        />
+      </section>
+      <section
+        class="gap-5 grid grid-cols-1 sm:grid-cols-3"
+        id="video-list"
+      ></section>
+    </main>
+  </body>
+</html>
