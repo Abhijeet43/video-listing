@@ -198,6 +198,9 @@
   .\!-m-px {
     margin: -1px !important;
   }
+  .m-8 {
+    margin: calc(var(--spacing) * 8);
+  }
   .mx-auto {
     margin-inline: auto;
   }
