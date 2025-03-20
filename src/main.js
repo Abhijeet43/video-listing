@@ -162,7 +162,7 @@ function createVideoElement(video) {
     video?.items?.contentDetails?.duration || "PT0M0S"
   );
   duration.className =
-    "absolute bg-white bottom-25 sm:bottom-30 right-3 text-gray-800 px-2 py-1 rounded-md text-sm";
+    "absolute bg-white bottom-32 right-2 text-gray-800 px-2 py-1 rounded-md text-sm";
 
   const metaInfo = document.createElement("div");
   metaInfo.className = "flex justify-center items-center gap-3 p-2";

@@ -189,11 +189,20 @@
   .relative {
     position: relative;
   }
+  .right-2 {
+    right: calc(var(--spacing) * 2);
+  }
   .right-3 {
     right: calc(var(--spacing) * 3);
   }
   .bottom-25 {
     bottom: calc(var(--spacing) * 25);
+  }
+  .bottom-30 {
+    bottom: calc(var(--spacing) * 30);
+  }
+  .bottom-32 {
+    bottom: calc(var(--spacing) * 32);
   }
   .\!-m-px {
     margin: -1px !important;
